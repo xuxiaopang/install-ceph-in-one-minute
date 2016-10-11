@@ -30,7 +30,7 @@ it is always recommnented to **Clean Up** your env before install ceph.
 ./cleanup.sh
 ```
 
-### Unistall 
+### Uninstall 
 
 When you want to install ceph from newer version to an older version, e.g. `10.2.3 to 0.94.9`, you need to uninstall the `10.2.3` ceph packages,
 and then install the `0.94.9` version. This is quite simple:
