@@ -26,7 +26,7 @@ gpgcheck=0
 
 yum install ceph ceph-radosgw ceph-deploy -y
 
-mkdir /root/cluster & cd /root/cluster & rm -f /root/cluster*
+mkdir /root/cluster & cd /root/cluster & rm -f /root/cluster/*
 
 sed -i 's/SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
 setenforce 0
@@ -43,3 +43,4 @@ mkdir /osd & rm -rf /osd/*
 ceph-deploy osd prepare $HOSTNAME:/osd
 ceph-deploy osd activate  $HOSTNAME:/osd
 
+ceph -s
