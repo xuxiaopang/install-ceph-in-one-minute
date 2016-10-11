@@ -27,6 +27,7 @@ gpgcheck=0
 yum install ceph ceph-radosgw ceph-deploy -y
 
 mkdir /root/cluster & cd /root/cluster & rm -f /root/cluster/*
+cd /root/cluster
 
 sed -i 's/SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
 setenforce 0
