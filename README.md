@@ -7,7 +7,7 @@ Before install ceph ,make sure your VM or Server can connet to Internet.
 The `install.sh` script will install a **HAMMER** ceph cluster with **ONLY ONE OSD** under`/root/osd`,
 this is used for quick installation in a clean envonriment.
 
-> If you have a pre-installed newer version ceph, you need to uninstall it. See the [Unistall](#Uninstall).
+> If you have a pre-installed newer version ceph, you need to uninstall it. See the [Unistall](#uninstall).
 
 ## Install
 ```
