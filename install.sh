@@ -35,7 +35,6 @@ systemctl stop firewalld
 systemctl disable firewalld
 
 ceph-deploy new $HOSTNAME
-ceph-deploy new $HOSTNAME
 
 echo osd pool default size = 1 >> ceph.conf
 echo osd crush chooseleaf type = 0 >> ceph.conf
