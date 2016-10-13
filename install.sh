@@ -38,6 +38,10 @@ ceph-deploy new $HOSTNAME
 
 echo osd pool default size = 1 >> ceph.conf
 echo osd crush chooseleaf type = 0 >> ceph.conf
+echo sd max object name len = 256 >> ceph.conf
+
+chown ceph:ceph /var/ceph/run/
+chown ceph:ceph /osd
 ceph-deploy mon create-initial
 mkdir /osd & rm -rf /osd/*
 ceph-deploy osd prepare $HOSTNAME:/osd
