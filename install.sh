@@ -40,6 +40,7 @@ echo osd pool default size = 1 >> ceph.conf
 echo osd crush chooseleaf type = 0 >> ceph.conf
 echo osd max object name len = 256 >> ceph.conf
 
+mkdir /var/ceph/run/
 chown ceph:ceph /var/ceph/run/
 chown ceph:ceph /osd
 ceph-deploy mon create-initial
