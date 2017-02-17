@@ -26,7 +26,7 @@ gpgcheck=0
 
 yum install ceph ceph-radosgw ceph-deploy -y
 
-mkdir /root/cluster & cd /root/cluster & rm -f /root/cluster/*
+mkdir -p  /root/cluster & cd /root/cluster & rm -f /root/cluster/*
 cd /root/cluster
 
 sed -i 's/SELINUX=.*/SELINUX=disabled/' /etc/selinux/config
@@ -41,11 +41,11 @@ echo osd crush chooseleaf type = 0 >> ceph.conf
 echo osd max object name len = 256 >> ceph.conf
 echo osd journal size = 128 >> ceph.conf
 
-mkdir /var/run/ceph/
+mkdir -p /var/run/ceph/
 chown ceph:ceph /var/run/ceph/
+mkdir -p /osd & rm -rf /osd/*
 chown ceph:ceph /osd
 ceph-deploy mon create-initial
-mkdir /osd & rm -rf /osd/*
 ceph-deploy osd prepare $HOSTNAME:/osd
 ceph-deploy osd activate  $HOSTNAME:/osd
 
