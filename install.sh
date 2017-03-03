@@ -10,7 +10,7 @@ rm -rf /etc/yum.repos.d/*.repo
 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
 sed -i '/aliyuncs/d' /etc/yum.repos.d/CentOS-Base.repo
-sed -i 's/$releasever/7.2.1511/g' /etc/yum.repos.d/CentOS-Base.repo
+sed -i 's/$releasever/7/g' /etc/yum.repos.d/CentOS-Base.repo
 sed -i '/aliyuncs/d' /etc/yum.repos.d/epel.repo
 
 echo "
